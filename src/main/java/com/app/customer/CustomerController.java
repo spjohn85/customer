@@ -1,6 +1,5 @@
 package com.app.customer;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,17 +9,11 @@ import java.util.List;
 public class CustomerController {
 
     private CustomerRepository custRepo;
-    @Value("${message: default Hello}")
-    private String message;
 
     public CustomerController(CustomerRepository custRepo) {
         this.custRepo = custRepo;
     }
 
-    @GetMapping("/")
-    public String showName(){
-        return message;
-    }
     @GetMapping("/all")
     public List<Customer> findAll(){
         return custRepo.findAll();

@@ -5,7 +5,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 public class Customer {
-
     @Id
     private Integer guid;
     private String firstName;

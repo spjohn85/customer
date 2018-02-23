@@ -8,4 +8,5 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @Configuration
 @EnableMongoRepositories(basePackageClasses = CustomerRepository.class)
 public class MongoDBConfig {
+
 }
